@@ -235,6 +235,8 @@ details.ts[open] summary:before{content:"▾ "}
 .talkt{margin-left:auto;text-align:right;line-height:1.1}
 .talkt small{display:block;font-size:10px;opacity:.85;font-family:var(--px)}
 .talkt b{font-family:var(--px);font-size:20px}
+.ms .em svg{width:36px;height:36px;fill:none;stroke:var(--lav-d);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.ms.dl .em svg{stroke:var(--pink-d)}
 </style>
 </head>
 <body>
@@ -256,6 +258,10 @@ details.ts[open] summary:before{content:"▾ "}
   <symbol id="i-loop" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3L20 9"/><path d="M20 4v5h-5"/><path d="M20 12a8 8 0 0 1-14 5.3L4 15"/><path d="M4 20v-5h5"/></symbol>
   <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4v16M6 20h12"/><path d="M4 9h16"/><path d="M4 9l-2 5h4zM20 9l-2 5h4z"/></symbol>
   <symbol id="i-brain" viewBox="0 0 24 24"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 3 3h1V4z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-3 3h-1V4z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h11a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M19 9h1a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-1v2.5L16 18h-4"/><path d="M6 9h7M6 12h4"/></symbol>
+  <symbol id="i-deck" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M12 16v4M8 20h8"/><path d="M7 12l3-3 2 2 4-4"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M12 18v-7M9 14l3-3 3 3"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0"/><path d="M12 17.5V21M8.5 21h7"/></symbol>
   <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></symbol>
 </svg>
 
@@ -705,10 +711,10 @@ details.ts[open] summary:before{content:"▾ "}
   <div class="sh"><span class="no">10</span><h2>組內時程</h2></div>
   <p class="sub">粉色是課程死線，紫色是組內進度。</p>
   <div class="mile">
-    <div class="ms"><div class="em">🧭</div><div class="dt">11/13</div><div class="wd">（五）</div><h4>中堂討論</h4><p>Final 框架＆分工</p></div>
-    <div class="ms"><div class="em">🎨</div><div class="dt">11/25</div><div class="wd">（三）22:00</div><h4>組內簡報完成</h4><p>11/23 前各自把內容給 A，A 整理</p></div>
-    <div class="ms dl"><div class="em">📮</div><div class="dt">12/17</div><div class="wd">（四）17:00</div><h4>報告繳交</h4><p>逾時不收</p></div>
-    <div class="ms dl"><div class="em">🎤</div><div class="dt">12/18</div><div class="wd">（五）</div><h4>上台報告</h4><p>10 分鐘＋Q&amp;A 5 分鐘</p></div>
+    <div class="ms"><div class="em"><svg><use href="#i-chat"/></svg></div><div class="dt">11/13</div><div class="wd">（五）</div><h4>中堂討論</h4><p>Final 框架＆分工</p></div>
+    <div class="ms"><div class="em"><svg><use href="#i-deck"/></svg></div><div class="dt">11/25</div><div class="wd">（三）22:00</div><h4>組內簡報完成</h4><p>11/23 前各自把內容給 A，A 整理</p></div>
+    <div class="ms dl"><div class="em"><svg><use href="#i-send"/></svg></div><div class="dt">12/17</div><div class="wd">（四）17:00</div><h4>報告繳交</h4><p>逾時不收</p></div>
+    <div class="ms dl"><div class="em"><svg><use href="#i-mic"/></svg></div><div class="dt">12/18</div><div class="wd">（五）</div><h4>上台報告</h4><p>10 分鐘＋Q&amp;A 5 分鐘</p></div>
   </div>
 </section>
 
