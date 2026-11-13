@@ -261,6 +261,14 @@ details.ts[open] summary:before{content:"▾ "}
 .slot .load i{width:8px;height:12px;background:rgba(255,255,255,.95);border-radius:1px}
 .slot .load i.o{background:rgba(255,255,255,.3)}
 @media(max-width:820px){.slot{grid-template-columns:1fr}.slot .when{flex-direction:row;justify-content:flex-start;gap:14px}.slot .what{border-right:0;border-bottom:1.5px dashed var(--line)}}
+
+.split2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.lane{background:#fff;border:2px solid var(--line);border-radius:12px;padding:12px 16px}
+.lane h4{margin:0 0 6px;font-size:15px;display:flex;gap:8px;align-items:center}
+.lane .px{font-family:var(--px);font-size:11px;color:#fff;background:var(--lav);border-radius:4px;padding:1px 7px}
+.lane.w .px{background:var(--pink-d)}
+.lane p{margin:0;font-size:13.5px;color:var(--mute)}
+@media(max-width:700px){.split2{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -306,11 +314,11 @@ details.ts[open] summary:before{content:"▾ "}
     </div>
     <div class="row">
       <span class="lbl">FIND ME</span>
-      <a class="p pF" href="#F"><b>F</b>書面協作</a>
+      <a class="p pF" href="#F"><b>F</b>開場・書面協助</a>
       <a class="p pB" href="#B"><b>B</b>公司背景</a>
-      <a class="p pC" href="#C"><b>C</b>框架・書面主筆</a>
+      <a class="p pC" href="#C"><b>C</b>框架・書面</a>
       <a class="p pA" href="#A"><b>A</b>RQ1–2 技術線</a>
-      <a class="p pD" href="#D"><b>D</b>RQ3 組織與人才</a>
+      <a class="p pD" href="#D"><b>D</b>RQ3・書面</a>
       <a class="p pE" href="#E"><b>E</b>RQ4＋收尾</a>
     </div>
   </div>
@@ -357,12 +365,12 @@ details.ts[open] summary:before{content:"▾ "}
   <div class="grid g4">
     <div class="card cp"><div class="ic">1</div><div><h4>酷題目</h4><p>must be a cool idea!</p><a class="p pC mini" href="#C"><b>C</b>C</a></div></div>
     <div class="card cp"><div class="ic">2</div><div><h4>Introduction</h4><p>課綱主題、研究目的與問題</p><a class="p pC mini" href="#C"><b>C</b>C</a></div></div>
-    <div class="card cp"><div class="ic">3</div><div><h4>公司背景</h4><p>沿革、產品、市場、財務、創新問題</p><a class="p pB mini" href="#B"><b>B</b>B</a></div></div>
-    <div class="card cp"><div class="ic">3.2</div><div><h4>組織圖＋受訪者位置</h4><p>已有草圖，見 <a href="#org">研發組織</a></p><a class="p pD mini" href="#D"><b>D</b>D</a></div></div>
-    <div class="card cp"><div class="ic">4.1</div><div><h4>Hot analysis</h4><p>四個 RQ，每段一人負責</p><a class="p pA mini" href="#A"><b>A</b>A</a> <a class="p pD mini" href="#D"><b>D</b>D</a> <a class="p pE mini" href="#E"><b>E</b>E</a></div></div>
+    <div class="card cp"><div class="ic">3</div><div><h4>公司背景</h4><p>B 給資料，C 寫成書面</p><a class="p pC mini" href="#C"><b>C</b>C</a></div></div>
+    <div class="card cp"><div class="ic">3.2</div><div><h4>組織圖＋受訪者位置</h4><p>用 D 簡報那張，見 <a href="#org">研發組織</a></p><a class="p pC mini" href="#C"><b>C</b>C</a></div></div>
+    <div class="card cp"><div class="ic">4.1</div><div><h4>Hot analysis</h4><p>四個 RQ 的書面由 D 統一寫</p><a class="p pD mini" href="#D"><b>D</b>D</a></div></div>
     <div class="card cp"><div class="ic">4.2</div><div><h4>高層訪談＋證明</h4><p>訪談 ✓；合照或名片截圖</p><a class="p pF mini" href="#F"><b>F</b>F</a></div></div>
     <div class="card cp"><div class="ic">5</div><div><h4>Findings＋6.1 結論</h4><p>四個 RQ 收成一張總表</p><a class="p pC mini" href="#C"><b>C</b>C</a></div></div>
-    <div class="card cp"><div class="ic">6</div><div><h4>建議＋Lessons learnt</h4><p>給玩美的建議；學到什麼、怎麼用在自己公司</p><a class="p pE mini" href="#E"><b>E</b>建議</a> <a class="p pC mini" href="#C"><b>C</b>彙整</a> <a class="p pF mini" href="#F"><b>F</b>F</a></div></div>
+    <div class="card cp"><div class="ic">6</div><div><h4>建議＋Lessons learnt</h4><p>給玩美的建議；學到什麼、怎麼用在自己公司</p><a class="p pD mini" href="#D"><b>D</b>建議</a> <a class="p pC mini" href="#C"><b>C</b>Lessons</a></div></div>
   </div>
 </section>
 
@@ -491,7 +499,7 @@ details.ts[open] summary:before{content:"▾ "}
 <!-- ORG -->
 <section id="org">
   <div class="sh"><span class="no">05</span><h2>研發組織（訪談整理）</h2></div>
-  <p class="sub">報告 3.2 的組織圖和 RQ3 都用這張，<a class="p pD mini" href="#D"><b>D</b>D</a> 負責；粉色是受訪者位置。</p>
+  <p class="sub"><a class="p pD mini" href="#D"><b>D</b>D</a> 上台講 RQ3 時用這張，<a class="p pC mini" href="#C"><b>C</b>C</a> 放進書面 3.2；粉色是受訪者位置。</p>
   <div class="win org">
     <div class="bar"><i></i><i></i><i></i><span>RD_ORG_CHART</span></div>
     <div class="body">
@@ -533,7 +541,7 @@ details.ts[open] summary:before{content:"▾ "}
 <!-- TEAM -->
 <section id="team">
   <div class="sh"><span class="no">06</span><h2>架構 × 上台順序 × 分工</h2></div>
-  <p class="sub">由上往下就是上台順序。每個人負責一個完整的段落，自己一次講完、自己寫完，不跟別人拆同一段。只給總時長，段落內怎麼分自己抓；合計 9:45，留 15 秒緩衝。</p>
+  <p class="sub">由上往下就是上台順序。每個人負責一個完整的段落，自己一次講完。只給總時長，段落內怎麼分自己抓；合計 9:45，留 15 秒緩衝。</p>
   <div class="stack">
     <a href="#F" style="--c:var(--F);flex:30">F 0:30</a>
     <a href="#B" style="--c:var(--B);flex:90">B 1:30</a>
@@ -545,36 +553,41 @@ details.ts[open] summary:before{content:"▾ "}
   </div>
   <div class="ticks"><span>0:00</span><span>2:00</span><span>4:00</span><span>6:00</span><span>8:00</span><span>10:00</span></div>
 
+  <div class="split2">
+    <div class="lane"><h4><span class="px">SLIDES</span>簡報組：A、B、E</h4><p>上台時間最長，只管自己那段的簡報和講稿。講稿寫在簡報備忘稿，書面組直接拿去改寫。</p></div>
+    <div class="lane w"><h4><span class="px">REPORT</span>書面組：C、D 主筆＋F</h4><p>C、D 上台時間最短，所以由他們寫 Word。一人寫前後段、一人寫分析段，F 跟著兩人處理圖表與格式。</p></div>
+  </div>
+
   <div class="show">
     <div class="slot" id="F" style="--c:var(--F)">
       <div class="when"><span class="ord">①</span><div class="L">F</div><div class="tm"><small>TALK</small>0:30</div><div class="load"><i></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i></div></div>
       <div class="what"><div class="tag2">OPENING</div><h3>開場</h3><div class="q">今天講什麼、誰講哪一段？</div><span class="th">題目</span><span class="th">組員</span><span class="th">議程</span><div class="ev">念 C 寫好的稿，帶出題目和上台順序，再交棒給 B。</div></div>
-      <div class="work"><div class="who">認領：＿＿＿</div><div class="h">上台講</div><ul><li>題目與組員介紹（照 C 寫好的稿）</li><li>彩排時負責計時</li></ul><div class="h">書面負責</div><ul><li>和 C 一起處理書面：把圖表、截圖放進 Word，檢查頁數、頁碼、圖表編號</li><li>收集參考資料連結給 C 排格式</li><li>訪談合照或名片截圖；YouCam、官網、logo 截圖素材</li></ul></div>
+      <div class="work"><div class="who">認領：＿＿＿</div><div class="h">上台講</div><ul><li>題目與組員介紹（照 C 寫好的稿）</li><li>彩排時負責計時</li></ul><div class="h">書面組（協助）</div><ul><li>跟著 C、D 處理書面：把圖表、截圖放進 Word，檢查頁數、頁碼、圖表編號</li><li>收集參考資料連結給 C、D</li><li>訪談合照或名片截圖；YouCam、官網、logo 截圖素材</li></ul></div>
     </div>
     <div class="slot" id="B" style="--c:var(--B)">
       <div class="when"><span class="ord">②</span><div class="L">B</div><div class="tm"><small>TALK</small>1:30</div><div class="load"><i></i><i></i><i></i><i class="o"></i><i class="o"></i></div></div>
       <div class="what"><div class="tag2">BACKGROUND</div><h3>公司背景與創新問題</h3><div class="q">玩美是誰？為什麼現在要重新分配研發？</div><span class="th">公司沿革</span><span class="th">產品與市場</span><span class="th">財務</span><div class="ev">C 端變現難 → 品牌來談授權 → B2B 訂閱；AI 讓技術門檻下降，B、C 成長同時放緩。</div></div>
-      <div class="work"><div class="who">認領：＿＿＿</div><div class="h">上台講</div><ul><li>公司介紹、創新問題</li></ul><div class="h">書面負責</div><ul><li>3.1 沿革（C 轉 B、上市、私有化）</li><li>3.3 產品、市場、財務數據表</li><li>3.4 主要創新問題</li></ul></div>
+      <div class="work"><div class="who">認領：＿＿＿</div><div class="h">上台講</div><ul><li>公司介紹、創新問題</li></ul><div class="h">交給書面組</div><ul><li>財務數據表（附來源）和講稿交給 C</li></ul></div>
     </div>
     <div class="slot" id="C" style="--c:var(--C)">
       <div class="when"><span class="ord">③</span><div class="L">C</div><div class="tm"><small>TALK</small>1:00</div><div class="load"><i></i><i></i><i></i><i class="o"></i><i class="o"></i></div></div>
       <div class="what"><div class="tag2">FRAMEWORK</div><h3>研究問題與分析框架</h3><div class="q">有限的研發資源，該投在哪裡？</div><span class="th">四個 RQ</span><span class="th">對應課綱主題</span><div class="ev">把後面四段串起來：診斷 → 取捨 → 組織 → 配置。</div></div>
-      <div class="work"><div class="who">認領：＿＿＿</div><div class="h">上台講</div><ul><li>研究問題與分析框架</li><li>幫 F 寫好開場稿</li></ul><div class="h">書面負責</div><ul><li>書面主筆：題目、Introduction、Findings、6.1 結論</li><li>收齊每人 Lessons learnt 寫成 6.3</li><li>整合 Word 全文，和 F 一起完成</li></ul></div>
+      <div class="work"><div class="who">認領：＿＿＿</div><div class="h">上台講</div><ul><li>研究問題與分析框架</li><li>幫 F 寫好開場稿</li></ul><div class="h">書面組（主筆）</div><ul><li>書面主筆（前後段）：1 題目、2 Introduction、3 公司背景（用 B 的資料）、3.2 組織圖（用 D 簡報那張）</li><li>5 Findings、6.1 結論、6.3 Lessons learnt（收齊每人 1–2 句）</li><li>最後整合 Word 全文，控制在 10 頁內</li></ul></div>
     </div>
     <div class="slot" id="A" style="--c:var(--A)">
       <div class="when"><span class="ord">④</span><div class="L">A</div><div class="tm"><small>TALK</small>3:00</div><div class="load"><i></i><i></i><i></i><i></i><i></i></div></div>
       <div class="what"><div class="tag2">RQ1 · RQ2 · TECH LINE</div><h3>RQ1 診斷＋RQ2 取捨</h3><div class="q">哪些技術仍是護城河？自研、串接還是收購？</div><span class="th">核心能力</span><span class="th">技術商品化</span><span class="th">互補資產</span><span class="th">開放式創新</span><span class="th">Make-or-Buy</span><span class="th">吸收能力</span><div class="ev">技術一覽 → 研發地圖 → 護城河（資料庫、最後一哩精確度）→ 自研／Aggregator 串接／收購 Wannaby。技術題 Q&amp;A 由 A 接。</div></div>
-      <div class="work"><div class="who">認領：＿＿＿</div><div class="h">上台講</div><ul><li>技術地圖、RQ1、RQ2</li><li>整理全組簡報，統一視覺</li></ul><div class="h">書面負責</div><ul><li>4 RQ1、RQ2 分析</li><li>技術一覽、研發地圖</li><li>給其他人一份技術名詞一句話定義</li></ul></div>
+      <div class="work"><div class="who">認領：＿＿＿</div><div class="h">上台講</div><ul><li>技術地圖、RQ1、RQ2</li><li>整理全組簡報，統一視覺</li></ul><div class="h">交給書面組</div><ul><li>RQ1、RQ2 講稿交給 D</li><li>檢查 D 寫的技術段落有沒有寫錯</li></ul></div>
     </div>
     <div class="slot" id="D" style="--c:var(--D)">
       <div class="when"><span class="ord">⑤</span><div class="L">D</div><div class="tm"><small>TALK</small>1:15</div><div class="load"><i></i><i></i><i></i><i class="o"></i><i class="o"></i></div></div>
       <div class="what"><div class="tag2">RQ3 · ORGANIZATION</div><h3>RQ3 組織：研發團隊怎麼改？</h3><div class="q">AI 時代，研發組織和人才要怎麼調整？</div><span class="th">研發組織設計</span><span class="th">Market-pull</span><span class="th">KMO</span><div class="ev">Engine Team＋B2C／B2B 研發＋各自 QA；CGO 把市場需求帶回研發；工程師轉向審查 AI 產出、走到前線；招募看學習動機。</div></div>
-      <div class="work"><div class="who">認領：＿＿＿</div><div class="h">上台講</div><ul><li>RQ3 研發組織與人才</li></ul><div class="h">書面負責</div><ul><li>3.2 組織圖（照<a href="#org">研發組織</a>那張重畫，標出 CGO）</li><li>4 RQ3 分析</li><li>提供一條建議給 E</li></ul></div>
+      <div class="work"><div class="who">認領：＿＿＿</div><div class="h">上台講</div><ul><li>RQ3 研發組織與人才（含組織圖）</li></ul><div class="h">書面組（主筆）</div><ul><li>書面主筆（分析段）：4 RQ1–RQ4（RQ1、RQ2 用 A 的講稿，RQ4 用 E 的講稿，RQ3 自己寫）</li><li>6.2 建議（用 E 的講稿）</li></ul></div>
     </div>
     <div class="slot" id="E" style="--c:var(--E)">
       <div class="when"><span class="ord">⑥</span><div class="L">E</div><div class="tm"><small>TALK</small>2:30</div><div class="load"><i></i><i></i><i></i><i></i><i class="o"></i></div></div>
       <div class="what"><div class="tag2">RQ4 · ALLOCATION</div><h3>RQ4 配置＋建議＋收尾</h3><div class="q">資源投向 B2C 還是 B2B？</div><span class="th">研發組合管理</span><span class="th">平台化</span><div class="ev">以 B 養 C；客製化只接指標客戶且能變標準品；中小品牌轉 API。最後收成 3 條建議和結論。</div></div>
-      <div class="work"><div class="who">認領：＿＿＿</div><div class="h">上台講</div><ul><li>RQ4、給玩美的建議</li><li>結論收尾（用 C 寫的結論段落）</li></ul><div class="h">書面負責</div><ul><li>4 RQ4 分析</li><li>6.2 建議：彙整 A、D 的建議，收成 3 條</li></ul></div>
+      <div class="work"><div class="who">認領：＿＿＿</div><div class="h">上台講</div><ul><li>RQ4、給玩美的 3 條建議</li><li>結論收尾</li></ul><div class="h">交給書面組</div><ul><li>RQ4、建議的講稿交給 D</li></ul></div>
     </div>
   </div>
 </section>
@@ -643,30 +656,24 @@ details.ts[open] summary:before{content:"▾ "}
 <!-- PAGES -->
 <section id="pages">
   <div class="sh"><span class="no">08</span><h2>Word 報告頁數（上限 10 頁）</h2></div>
-  <p class="sub">先照這個比例寫。書面由 C、F 兩人一起處理，超出 10 頁由 C 統一刪減。</p>
+  <p class="sub">書面組兩人各寫一塊，頁數差不多；F 跟著兩人處理圖表和格式。超出 10 頁由 C 統一刪減。</p>
   <div class="stack">
-    <a href="#C" style="--c:var(--C);flex:1">C＋F 緒論</a>
-    <a href="#B" style="--c:var(--B);flex:1.5">B 公司</a>
-    <a href="#D" style="--c:var(--D);flex:.5">D</a>
-    <a href="#A" style="--c:var(--A);flex:2">A RQ1＋RQ2</a>
-    <a href="#D" style="--c:var(--D);flex:1">D RQ3</a>
-    <a href="#E" style="--c:var(--E);flex:1.5">E RQ4</a>
-    <a href="#C" style="--c:var(--C);flex:1">C＋F 結論</a>
-    <a href="#E" style="--c:var(--E);flex:.75">E 建議</a>
-    <a href="#C" style="--c:var(--C);flex:.75">C＋F</a>
+    <a href="#C" style="--c:var(--C);flex:3">C：題目、緒論、公司背景、組織圖</a>
+    <a href="#D" style="--c:var(--D);flex:5.25">D：RQ1–RQ4 分析＋6.2 建議</a>
+    <a href="#C" style="--c:var(--C);flex:1.75">C：結論、Lessons</a>
   </div>
   <div class="ticks"><span>0</span><span>2</span><span>4</span><span>6</span><span>8</span><span>10 頁</span></div>
   <div class="rows">
     <div class="r" style="--c:var(--C)"><span>1–2 題目＋Introduction</span><div class="track"><div class="fill" style="width:50%"></div></div><span class="v">1</span></div>
-    <div class="r" style="--c:var(--B)"><span>3 公司背景</span><div class="track"><div class="fill" style="width:75%"></div></div><span class="v">1.5</span></div>
-    <div class="r" style="--c:var(--D)"><span>3.2 組織圖</span><div class="track"><div class="fill" style="width:25%"></div></div><span class="v">0.5</span></div>
-    <div class="r" style="--c:var(--A)"><span>4 RQ1＋RQ2</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="v">2</span></div>
+    <div class="r" style="--c:var(--C)"><span>3 公司背景＋3.2 組織圖</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="v">2</span></div>
+    <div class="r" style="--c:var(--D)"><span>4 RQ1＋RQ2（A 的講稿）</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="v">2</span></div>
     <div class="r" style="--c:var(--D)"><span>4 RQ3 組織與人才</span><div class="track"><div class="fill" style="width:50%"></div></div><span class="v">1</span></div>
-    <div class="r" style="--c:var(--E)"><span>4 RQ4 研發配置</span><div class="track"><div class="fill" style="width:75%"></div></div><span class="v">1.5</span></div>
+    <div class="r" style="--c:var(--D)"><span>4 RQ4（E 的講稿）</span><div class="track"><div class="fill" style="width:75%"></div></div><span class="v">1.5</span></div>
+    <div class="r" style="--c:var(--D)"><span>6.2 建議</span><div class="track"><div class="fill" style="width:37.5%"></div></div><span class="v">0.75</span></div>
     <div class="r" style="--c:var(--C)"><span>5 Findings＋6.1 結論</span><div class="track"><div class="fill" style="width:50%"></div></div><span class="v">1</span></div>
-    <div class="r" style="--c:var(--E)"><span>6.2 建議</span><div class="track"><div class="fill" style="width:37.5%"></div></div><span class="v">0.75</span></div>
     <div class="r" style="--c:var(--C)"><span>6.3 Lessons＋參考文獻</span><div class="track"><div class="fill" style="width:37.5%"></div></div><span class="v">0.75</span></div>
   </div>
+  <p class="sub" style="margin-top:12px">C 合計 4.75 頁，D 合計 5.25 頁。</p>
 </section>
 
 <!-- TIME -->
@@ -675,7 +682,7 @@ details.ts[open] summary:before{content:"▾ "}
   <p class="sub">粉色是課程死線，紫色是組內進度。</p>
   <div class="mile">
     <div class="ms"><div class="em"><svg><use href="#i-chat"/></svg></div><div class="dt">11/13</div><div class="wd">（五）</div><h4>中堂討論</h4><p>Final 框架＆分工</p></div>
-    <div class="ms"><div class="em"><svg><use href="#i-deck"/></svg></div><div class="dt">11/25</div><div class="wd">（三）22:00</div><h4>組內簡報完成</h4><p>11/23 前各自把內容給 A，A 整理</p></div>
+    <div class="ms"><div class="em"><svg><use href="#i-deck"/></svg></div><div class="dt">11/25</div><div class="wd">（三）22:00</div><h4>組內簡報完成</h4><p>11/23 前各自把內容給 A，A 整理；講稿寫在備忘稿</p></div>
     <div class="ms dl"><div class="em"><svg><use href="#i-send"/></svg></div><div class="dt">12/17</div><div class="wd">（四）17:00</div><h4>報告繳交</h4><p>逾時不收</p></div>
     <div class="ms dl"><div class="em"><svg><use href="#i-mic"/></svg></div><div class="dt">12/18</div><div class="wd">（五）</div><h4>上台報告</h4><p>10 分鐘＋Q&amp;A 5 分鐘</p></div>
   </div>
